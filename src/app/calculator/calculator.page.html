@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+<ion-toolbar style="text-align: center;">
+    <ion-title>Calculator-App</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content [scrollY]="false">
+  <ion-content [scrollY]="false">
+    <div class="c-container">
+      <div class="historicalResults ion-margin-top">
+        <p *ngFor="let result of historicalResults">{{ result }}</p>
+      </div>
+      <div class="results">
+        {{ emptyContent }}
+      </div>
+      <ion-button class="charBotton" expand="block" (click)="deleteAll()">AC</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="deleteChar()">DEL</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="getPercentage()">%</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="updateOperation('÷')">÷</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('7')">7</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('8')">8</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('9')">9</ion-button>
+
+      <ion-button class="charBotton"expand="block" (click)="updateOperation('*')">*</ion-button>
+
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('4')">4</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('5')">5</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('6')">6</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="updateOperation('-')">-</ion-button>
+
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('1')">1</ion-button>
+
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('2')">2</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('3')">3</ion-button>
+      
+      <ion-button class="charBotton" expand="block" (click)="updateOperation('+')">+</ion-button>
+      <ion-button class="numberBotton" expand="block" (click)="updateNumber('0')">0</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="getSquareRoot()">√</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="updateNumber('.')">.</ion-button>
+      <ion-button class="charBotton" expand="block" (click)="results()">=</ion-button>
+    </div>
+  </ion-content>
+</ion-content>

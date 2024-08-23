@@ -1,0 +1,173 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import '@ionic/angular/css/palettes/dark.always.css';
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.class.css";
+
+ion-content::part(background) {
+    background-color: black !important;
+}
+
+ion-toolbar {
+    --background: black
+}
+
+.c-container {
+    color: black;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+    border-radius: 10px;
+    gap: 5px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.results {
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    grid-column: 1 / -1;
+    text-align: end;
+    font-size: 30px;
+    height: 50px;
+    padding: 15px;
+    margin-bottom: 8px;
+    color: rgb(255, 255, 255);
+}
+
+.historicalResults {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    position: static;
+    grid-column: 1 / -1;
+    text-align: end;
+    font-size: 15px;
+    min-height: 20vh;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.charBotton,
+.numberBotton {
+    --border-radius: 5px;
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight: bold;
+    height: 60px;
+    --background: transparent;
+}
+
+.charBotton {
+    --color: orange;
+}
+
+.numberBotton {
+    --color: rgb(255, 255, 255);
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 360px) {
+    .c-container {
+        gap: 5px;
+        padding: 0.5rem;
+    }
+
+    .results {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .charBotton, .numberBotton {
+        font-size: 16px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .results {
+        font-size: 28px;
+        height: 60px;
+    }
+
+    .charBotton, .numberBotton {
+        font-size: 20px;
+        height: 60px;
+    }
+}
+
+/* Estilos para orientación horizontal en dispositivos móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .c-container {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 90vw;
+    }
+
+    .results, .historicalResults {
+        grid-column: span 6;
+    }
+
+    .charBotton, .numberBotton {
+        height: 40px;
+    }
+}
+
+/* Ajustes para dispositivos de alta densidad de píxeles */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .results, .historicalResults, .charBotton, .numberBotton {
+        border-width: 1px;
+    }
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1200px) {
+    .c-container {
+        max-width: 800px;
+    }
+}
+
+/* Ajustes para centrado vertical en pantallas altas */
+@media (min-height: 800px) {
+    .c-container {
+        margin-top: 5vh;
+    }
+}
