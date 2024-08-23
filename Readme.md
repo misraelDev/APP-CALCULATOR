@@ -10,3 +10,7 @@ Thanks for visiting! Don’t forget to leave a star ⭐ if you liked the project
 
 > [!IMPORTANT]
 > If you want to contribute a new implementation, please create a new branch and share the repository to improve the project.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6cbd8d42-b05f-4d8a-9daf-834c7fa62455" alt="Calculator-App">
+</p>
